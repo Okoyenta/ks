@@ -30,15 +30,6 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
-setTimeout(() => {
-    console.log("Delayed for 1 second.");
-  }, "1000")
-
-  function intervalFunc() {
-    console.log(token.generate(16));
-  }
-  
- // . setInterval(intervalFunc, 1500);
 
 //routes
 app.use('/', require('./routes/user'))
