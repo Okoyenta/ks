@@ -3,11 +3,16 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const passport = require('passport')
 const token = require('rand-token')
+const cors = require('cors')
+
 
 require('./controller/passport')(passport)
 
 const app = express()
 const PORT = process.env.PORT || 5000
+
+//cors
+app.use(cors())
 
 //configure database
 const db = require('./config/key').mongoURL

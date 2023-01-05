@@ -43,4 +43,10 @@ let updateUser = async (req, res) => {
 
 }
 
-module.exports= { getAllUser, getUser, deleteUser, updateUser }
+let deleteAllUser = async (req, res) => {
+   let k = await User.deleteMany()
+   console.log(k)
+    res.send(k + 'love') 
+}
+
+module.exports = { getAllUser, getUser, deleteUser, updateUser, deleteAllUser }

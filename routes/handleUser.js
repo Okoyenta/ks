@@ -10,5 +10,6 @@ router.get('/', authenticateToken, handleUser.getAllUser)
 router.put('/:name', handleUser.updateUser)
 router.get('/:name', handleUser.getUser)
 router.delete('/:name', handleUser.deleteUser)
+router.delete('/remove/user', handleUser.deleteAllUser)
 
 module.exports = router
