@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000
 app.use(cors())
 
 //configure database
-const db = require('./config/key').mongoURL
+const db = require('./config_/key').mongoURL
 mongoose.connect(db, {useUnifiedTopology: true , useNewUrlParser : true})
 
 //bodyparser
